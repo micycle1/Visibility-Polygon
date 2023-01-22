@@ -1,18 +1,14 @@
-package tests;
+package davidglavas.polyvis;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import visibilityPolygon.CCWPolygon;
-import visibilityPolygon.CommonUtils;
-import visibilityPolygon.VisibilityPolygon;
-
- public class TestVisibilityPol {
+class TestVisibilityPol {
 
 	@Test
 	public void interiorConvex() {

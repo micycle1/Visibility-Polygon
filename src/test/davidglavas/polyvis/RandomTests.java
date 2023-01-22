@@ -1,16 +1,10 @@
-package tests;
+package davidglavas.polyvis;
 
 import java.applet.Applet;
-import java.awt.Graphics;
-import java.awt.geom.Path2D;
-import java.awt.geom.PathIterator;
-import java.awt.geom.Point2D;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
-
-import visibilityPolygon.Orientation;
 
 public class RandomTests extends Applet {
 

@@ -1,30 +1,20 @@
-package tests;
-
-import static org.junit.Assert.assertTrue;
+package davidglavas.polyvis;
 
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Path2D;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import org.junit.Test;
-
-import visibilityPolygon.CCWPolygon;
-import visibilityPolygon.VisibilityPolygon;
 
 /**
  *	Used for visualizing visibility polygons, some examples are included.

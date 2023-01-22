@@ -1,4 +1,4 @@
-package visibilityPolygon;
+package davidglavas.polyvis;
 
 /**
  * Encapsulates polar points with their corresponding angular displacement as used in Joe&Simpson's 1985 paper.

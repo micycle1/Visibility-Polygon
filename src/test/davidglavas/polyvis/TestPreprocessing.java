@@ -1,20 +1,18 @@
-package tests;
+package davidglavas.polyvis;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.awt.geom.Point2D;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import visibilityPolygon.CCWPolygon;
-import visibilityPolygon.CommonUtils;
-import visibilityPolygon.VisibilityPolygon;
-import visibilityPolygon.CommonUtils.Pair;
-import visibilityPolygon.VisibilityPolygon.VsRep;
+import davidglavas.polyvis.CommonUtils.Pair;
+import davidglavas.polyvis.VisibilityPolygon.VsRep;
 
-public class TestPreprocessing {
+class TestPreprocessing {
 
 	@Test
 	public void testPreprocess1() {

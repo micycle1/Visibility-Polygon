@@ -1,4 +1,4 @@
-package visibilityPolygon;
+package davidglavas.polyvis;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayDeque;
@@ -9,8 +9,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import visibilityPolygon.CommonUtils.Pair;
-import visibilityPolygon.CommonUtils.Ray2D;
+import davidglavas.polyvis.CommonUtils.Pair;
+import davidglavas.polyvis.CommonUtils.Ray2D;
 
 /**
  * This class can be used to compute the visibility polygon from a point inside

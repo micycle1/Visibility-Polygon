@@ -1,4 +1,4 @@
-package visibilityPolygon;
+package davidglavas.polyvis;
 
 public enum Orientation {
 	COUNTERCLOCKWISE, CLOCKWISE, COLLINEAR;

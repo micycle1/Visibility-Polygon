@@ -1,9 +1,9 @@
-package visibilityPolygon;
+package davidglavas.polyvis;
 
 import java.awt.geom.Point2D;
 
-import visibilityPolygon.CommonUtils.Direction;
-import visibilityPolygon.CommonUtils.Ray2D;
+import davidglavas.polyvis.CommonUtils.Direction;
+import davidglavas.polyvis.CommonUtils.Ray2D;
 
 public class LineSegment {
 	

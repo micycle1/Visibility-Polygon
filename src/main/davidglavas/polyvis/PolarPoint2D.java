@@ -1,4 +1,4 @@
-package visibilityPolygon;
+package davidglavas.polyvis;
 
 import java.awt.geom.Point2D;
 import java.util.Objects;
