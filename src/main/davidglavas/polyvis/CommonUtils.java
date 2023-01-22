@@ -2,13 +2,13 @@ package davidglavas.polyvis;
 
 import java.awt.geom.Point2D;
 
-public class CommonUtils {
+class CommonUtils {
 
 	// constants
-	static double PI = Math.PI;
-	static double PI2 = 2 * PI;
-	public static double Eps = 0.0000000001;
-	static Point2D origin2D = new Point2D.Double(0, 0);
+	static final double PI = Math.PI;
+	static final double PI2 = 2 * PI;
+	public static final double Eps = 0.0000000001;
+	static final Point2D origin2D = new Point2D.Double(0, 0);
 
 	/** Checks if a and b are approximately equal to account for floating point precision limitations. 
 	 * 

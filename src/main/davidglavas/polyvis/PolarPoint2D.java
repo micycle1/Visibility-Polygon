@@ -1,7 +1,6 @@
 package davidglavas.polyvis;
 
 import java.awt.geom.Point2D;
-import java.util.Objects;
 
 public class PolarPoint2D {
 	double r; // distance to p

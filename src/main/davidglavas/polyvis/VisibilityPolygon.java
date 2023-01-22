@@ -15,38 +15,41 @@ import davidglavas.polyvis.CommonUtils.Ray2D;
 /**
  * This class can be used to compute the visibility polygon from a point inside
  * of a simple polygon (given as n vertices in CCW order) in O(n) time.
- * 
+ * <p>
  * Usage example:
-  
-        // initialize polygon vertices in CCW order
-		List<Point2D> vertices = new ArrayList<>();
-		vertices.add(new Point2D.Double(-2, 2));
-		vertices.add(new Point2D.Double(6, 2));
-		vertices.add(new Point2D.Double(4, 6));
-		vertices.add(new Point2D.Double(1, 4));
-		vertices.add(new Point2D.Double(-1, 6));
-		vertices.add(new Point2D.Double(-2, 4));
-
-		// initialize polygon
-		CCWPolygon pol = new CCWPolygon(vertices);
-		// initialize viewpoint
-		Point2D z = new Point2D.Double(4, 4);
-
-		// VP contains the visibility polygon from z in pol in CCW order.
-		CCWPolygon VP = VisibilityPolygon.computeVisPol(pol, z);
  * 
+ * <pre>
+  {@code
+ * // initialize polygon vertices in CCW order
+ * List<Point2D> vertices = new ArrayList<>();
+ * vertices.add(new Point2D.Double(-2, 2));
+ * vertices.add(new Point2D.Double(6, 2));
+ * vertices.add(new Point2D.Double(4, 6));
+ * vertices.add(new Point2D.Double(1, 4));
+ * vertices.add(new Point2D.Double(-1, 6));
+ * vertices.add(new Point2D.Double(-2, 4));
  * 
+ * // initialize polygon
+ * CCWPolygon pol = new CCWPolygon(vertices);
+ * // initialize viewpoint
+ * Point2D z = new Point2D.Double(4, 4);
+ * 
+ * // VP contains the visibility polygon from z in pol in CCW order.
+ * CCWPolygon VP = VisibilityPolygon.computeVisPol(pol, z);
+ * }
+	</pre>
  * 
  * Based on: Joe and Simpson's (1985) visibility polygon algorithm.
- * 		     https://cs.uwaterloo.ca/research/tr/1985/CS-85-38.pdf
+ * https://cs.uwaterloo.ca/research/tr/1985/CS-85-38.pdf
  * 
  */
 public class VisibilityPolygon {
 
 	/**
 	 * Computes visibility polygon from one viewpoint.
+	 * 
 	 * @param pol Simple polygon.
-	 * @param z Viewpoint inside (boundary is fine too) of the polygon.
+	 * @param z   Viewpoint inside (boundary is fine too) of the polygon.
 	 * @return Visibility polygon in CCW order.
 	 */
 	public static CCWPolygon computeVisPol(CCWPolygon pol, Point2D z) {
@@ -540,12 +543,13 @@ public class VisibilityPolygon {
 	}
 
 	// Encapsulates vertices, their angular displacements, if the viewpoint is a vertex and n as described in the paper.
-	public static class VsRep {
+	static class VsRep {
+		
 		public List<VertDispl> v;
 		public boolean zIsVertex;
 		int n;
 
-		public VsRep(List<PolarPoint2D> vs, boolean zIsVertex) {
+		VsRep(List<PolarPoint2D> vs, boolean zIsVertex) {
 			this.zIsVertex = zIsVertex;
 			n = (zIsVertex) ? vs.size() - 1 : vs.size();
 
@@ -555,11 +559,11 @@ public class VisibilityPolygon {
 				v = computeAngularDisplacements(vs);
 		}
 
-		public VertDispl get(int i) {
+		VertDispl get(int i) {
 			return v.get(i);
 		}
 
-		public int size() {
+		int size() {
 			return v.size();
 		}
 	}
