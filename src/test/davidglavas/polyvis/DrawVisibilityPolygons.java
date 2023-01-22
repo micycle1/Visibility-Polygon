@@ -22,15 +22,15 @@ import javax.swing.JPanel;
 public class DrawVisibilityPolygons {
 
 	public static void main(String[] args) {
-//       DC1();
-//	     DC2();
-//	     DC3Original();
-//		 DC3Corrected();
-//		 interiorNotConvex();
-//		 interiorConvex();
-//		 onEdgeConvex();
-//		 onEdgeNotConvex();
-//		 onVertexIsConvex();
+//		DC1();
+//		DC2();
+//		DC3Original();
+//		DC3Corrected();
+//		interiorNotConvex();
+//		interiorConvex();
+//		onEdgeConvex();
+//		onEdgeNotConvex();
+//		onVertexIsConvex();
 		onVertexNotConvex();
 	}
 
@@ -378,8 +378,10 @@ class Figure extends JPanel {
 		}
 		
 		JFrame frame = new JFrame();
-		frame.setTitle("Visibility");
-		frame.setSize(800, 700);
+		frame.setTitle("Visibility Demo");
+		frame.setSize(1280, 720);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
 
 		frame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
